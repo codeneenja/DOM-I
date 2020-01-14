@@ -58,14 +58,14 @@ for(let i = 0; i < anchors.length; i++){
 }
 const aChildAppend = document.createElement("a");
 aChildAppend.href = "#";
-aChildAppend.textContent = "Child Append";
+aChildAppend.textContent = "Stephanie Append";
 aChildAppend.style.color = "green";
 const nav = document.querySelector("nav");
 nav.appendChild(aChildAppend);
 
 const aPrepend = document.createElement("a");
 aPrepend.href = "#";
-aPrepend.textContent = "Prepend";
+aPrepend.textContent = "Smith Prepend";
 aPrepend.style.color = "green";
 nav.prepend(aPrepend);
 let h4 = document.querySelectorAll("h4");
