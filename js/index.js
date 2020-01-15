@@ -37,38 +37,41 @@ const siteContent = {
   },
 };
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let headerImg = document.getElementById("cta-img");
+const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let middleImg = document.getElementById("middle-img");
+const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-let h1 = document.querySelector("h1");
+const h1 = document.querySelector("h1");
 h1.textContent = siteContent["cta"]["h1"];
 
-let button = document.querySelector("button");
+const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
-let anchors = document.querySelectorAll("a");
-for(let i = 0; i < anchors.length; i++){
-  anchors[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+const anchor = document.querySelectorAll("a");
+for(let i = 0; i < anchor.length; i++){
+  anchor[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
 }
-const aChildAppend = document.createElement("a");
-aChildAppend.href = "#";
-aChildAppend.textContent = "Stephanie Append";
-aChildAppend.style.color = "green";
-const nav = document.querySelector("nav");
-nav.appendChild(aChildAppend);
 
-const aPrepend = document.createElement("a");
-aPrepend.href = "#";
-aPrepend.textContent = "Smith Prepend";
-aPrepend.style.color = "green";
-nav.prepend(aPrepend);
-let h4 = document.querySelectorAll("h4");
+const anchorAppend = document.createElement("a");
+anchorAppend.href = "#";
+anchorAppend.textContent = "Smith Append";
+anchorAppend.style.color = "green";
+const nav = document.querySelector("nav");
+nav.appendChild(anchorAppend);
+anchorAppend.style.fontSize= '10px'
+
+const navPrepend = document.createElement("a");
+navPrepend.href = "#";
+navPrepend.textContent = "Prepend";
+navPrepend.style.color = "red";
+navPrepend.style.fontSize = '10px';
+nav.prepend(navPrepend);
+const h4 = document.querySelectorAll("h4");
 h4[0].textContent = siteContent["main-content"]["features-h4"];
 h4[1].textContent = siteContent["main-content"]["about-h4"];
 h4[2].textContent = siteContent["main-content"]["services-h4"];
@@ -76,7 +79,8 @@ h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["contact"]["contact-h4"];
 
-let p = document.querySelectorAll("p");
+
+const p = document.querySelectorAll("p");
 p[0].textContent = siteContent["main-content"]["features-content"];
 p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
