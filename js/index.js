@@ -39,13 +39,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
+//all images
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
+//h1 and button
 const h1 = document.querySelector("h1");
 h1.textContent = siteContent["cta"]["h1"];
 
@@ -56,7 +56,7 @@ const anchor = document.querySelectorAll("a");
 for(let i = 0; i < anchor.length; i++){
   anchor[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
 }
-
+//append, prepend and add element
 const anchorAppend = document.createElement("a");
 anchorAppend.href = "#";
 anchorAppend.textContent = "Smith Append";
@@ -67,10 +67,11 @@ anchorAppend.style.fontSize= '10px'
 
 const navPrepend = document.createElement("a");
 navPrepend.href = "#";
-navPrepend.textContent = "Prepend";
+navPrepend.textContent = "Stephanie";
 navPrepend.style.color = "red";
 navPrepend.style.fontSize = '10px';
 nav.prepend(navPrepend);
+//all h4 tags
 const h4 = document.querySelectorAll("h4");
 h4[0].textContent = siteContent["main-content"]["features-h4"];
 h4[1].textContent = siteContent["main-content"]["about-h4"];
@@ -79,7 +80,7 @@ h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["contact"]["contact-h4"];
 
-
+//all paragraph tags
 const p = document.querySelectorAll("p");
 p[0].textContent = siteContent["main-content"]["features-content"];
 p[1].textContent = siteContent["main-content"]["about-content"];
